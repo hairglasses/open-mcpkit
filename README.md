@@ -20,7 +20,9 @@ For a quick review path:
 1. Run the five-minute commands in [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md).
 2. Compare output shapes in [docs/EXAMPLES.md](docs/EXAMPLES.md).
 3. Review the request path in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
-4. Check [PUBLIC_BOUNDARY.md](PUBLIC_BOUNDARY.md) before adding tools or examples.
+4. Use [docs/PORTFOLIO_PROOF.md](docs/PORTFOLIO_PROOF.md) for the architecture
+   diagram, walkthrough plan, tradeoffs, and interview prompts.
+5. Check [PUBLIC_BOUNDARY.md](PUBLIC_BOUNDARY.md) before adding tools or examples.
 
 ## What Works Now
 
