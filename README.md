@@ -1,6 +1,8 @@
 # open-mcpkit
 
 [![ci](https://github.com/hairglasses/open-mcpkit/actions/workflows/ci.yml/badge.svg)](https://github.com/hairglasses/open-mcpkit/actions/workflows/ci.yml)
+[![Go](https://img.shields.io/badge/Go-1.24+-00ADD8?logo=go&logoColor=white)](https://go.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Public-safe Go reference implementation for MCP-style server patterns: typed
 in-process tools, gateway dispatch, middleware chains, policy gates, response
@@ -10,6 +12,15 @@ This repository is intentionally small. It demonstrates the engineering shape
 of production MCP infrastructure without publishing private account connectors,
 tenant data, workstation state, OAuth flows, browser automation, or operational
 systems.
+
+## Start Here
+
+For a quick review path:
+
+1. Run the five-minute commands in [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md).
+2. Compare output shapes in [docs/EXAMPLES.md](docs/EXAMPLES.md).
+3. Review the request path in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+4. Check [PUBLIC_BOUNDARY.md](PUBLIC_BOUNDARY.md) before adding tools or examples.
 
 ## What Works Now
 
@@ -29,6 +40,7 @@ budget checks always in the path.
 ## Usage
 
 ```bash
+make ci
 go run ./cmd/open-mcpkit manifest
 go run ./cmd/open-mcpkit call sample_echo --param message=hello
 go run ./cmd/open-mcpkit call sample_launch_plan --param goal='inspect a repo' --param provider=codex
@@ -52,5 +64,9 @@ See [PUBLIC_BOUNDARY.md](PUBLIC_BOUNDARY.md) before adding examples or tools.
 
 ```bash
 make ci
-gitleaks detect --source . --redact
+gitleaks detect --source . --no-git --redact
 ```
+
+`make ci` runs tests, vet, a temporary build, deterministic smoke commands,
+public-boundary checks, and optional local `gitleaks` / `actionlint` checks when
+those tools are installed.
