@@ -31,4 +31,7 @@ Checked on 2026-05-27 20:41 PDT:
   inside `make ci`.
 - Full-history `gitleaks detect --source . --redact`: passed after initial
   local commit.
-- GitHub visibility: pending first public push after local gates pass.
+- GitHub visibility: public repository verified after first push.
+- Public unauthenticated read: verified with `git ls-remote` and raw README
+  fetch.
+- GitHub Actions CI: passed on the first public push.
