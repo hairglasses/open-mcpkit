@@ -24,11 +24,11 @@ gitleaks when available, and actionlint when available.
 
 ## Latest Verification Snapshot
 
-Checked on 2026-05-27 20:38 PDT:
+Checked on 2026-05-27 20:41 PDT:
 
 - Local `make ci`: passed on initial scaffold before first public push.
 - Working-tree secret scan: passed via `gitleaks detect --source . --no-git --redact`
   inside `make ci`.
-- Full-history `gitleaks detect --source . --redact`: pending first commit,
-  then rerun before public release.
+- Full-history `gitleaks detect --source . --redact`: passed after initial
+  local commit.
 - GitHub visibility: pending first public push after local gates pass.
